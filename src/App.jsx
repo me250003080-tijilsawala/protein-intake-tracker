@@ -554,261 +554,50 @@ function isFoodAllowed(name, preference) {
    FLEXED-PHYSIQUE ILLUSTRATION
    The coach does not depend on this artwork.
 ========================================== */
-
-function ArmIllustration() {
+function AuraOrb() {
   return (
-    <svg
-      className="arm-svg physique-svg"
-      viewBox="0 0 420 370"
-      role="img"
-      aria-label="Stylized muscular upper body"
-    >
-      <defs>
-        <linearGradient id="bodySkin" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#f0ffd0" />
-          <stop offset="28%" stopColor="#baff83" />
-          <stop offset="65%" stopColor="#59d99b" />
-          <stop offset="100%" stopColor="#176b55" />
-        </linearGradient>
+    <div className="aura-scene" aria-hidden="true">
+      {/* Soft energy surrounding the orb */}
+      <div className="aura-halo aura-halo-one" />
+      <div className="aura-halo aura-halo-two" />
 
-        <linearGradient id="muscleLight" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0%" stopColor="#eaffc7" />
-          <stop offset="55%" stopColor="#b3ff7c" />
-          <stop offset="100%" stopColor="#63dca0" />
-        </linearGradient>
+      {/* Saturn ring at the back */}
+      <div className="aura-ring aura-ring-back">
+        <span className="aura-ring-light" />
+      </div>
 
-        <linearGradient id="muscleShadow" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#174b3f" />
-          <stop offset="100%" stopColor="#328b6c" />
-        </linearGradient>
+      {/* Glowing energy ball */}
+      <div className="aura-globe">
+        <div className="aura-globe-shine" />
 
-        <radialGradient id="bodyAura">
-          <stop offset="0%" stopColor="#7bffae" stopOpacity=".34" />
-          <stop offset="55%" stopColor="#40edb4" stopOpacity=".12" />
-          <stop offset="100%" stopColor="#40edb4" stopOpacity="0" />
-        </radialGradient>
+        <span className="aura-monogram">
+          P<span>+</span>
+        </span>
 
-        <filter id="physiqueGlow" x="-45%" y="-35%" width="190%" height="180%">
-          <feGaussianBlur stdDeviation="3" result="blur" />
-          <feMerge>
-            <feMergeNode in="blur" />
-            <feMergeNode in="SourceGraphic" />
-          </feMerge>
-        </filter>
-      </defs>
+        <span className="aura-caption">PROTEIN CORE</span>
 
-      <ellipse
-        cx="210"
-        cy="190"
-        rx="185"
-        ry="175"
-        fill="url(#bodyAura)"
-      />
+        <div className="aura-globe-inner-ring" />
+      </div>
 
-      <g className="physique-arms" filter="url(#physiqueGlow)">
-        <g className="physique-arm-left">
-          <path
-            d="M151 108 C133 90 117 78 97 74 C81 71 68 82 69 99 C69 116 82 127 100 127 C118 126 137 116 155 117 Z"
-            fill="url(#bodySkin)"
-            stroke="#dfffba"
-            strokeWidth="2"
-          />
+      {/* Saturn ring at the front */}
+      <div className="aura-ring aura-ring-front">
+        <span className="aura-ring-light" />
+      </div>
 
-          <path
-            d="M96 89 C84 84 74 91 74 101 C74 113 85 121 98 119 C109 117 120 111 128 105 C117 100 106 92 96 89 Z"
-            fill="url(#muscleLight)"
-          />
+      {/* Floating energy particles */}
+      <span className="aura-particle aura-particle-one" />
+      <span className="aura-particle aura-particle-two" />
+      <span className="aura-particle aura-particle-three" />
+      <span className="aura-particle aura-particle-four" />
 
-          <path
-            d="M100 78 C94 67 87 57 84 46 C82 38 88 31 96 34 C103 37 109 48 115 52 L130 63 C142 70 152 83 158 99 L148 113 C135 103 124 96 112 92 Z"
-            fill="url(#bodySkin)"
-            stroke="#dfffba"
-            strokeWidth="2"
-          />
-
-          <path
-            d="M81 50 C73 45 71 35 78 29 C83 25 89 29 93 35 L99 43 C103 35 111 36 115 42 C119 47 115 54 110 59 L103 68 L91 64 Z"
-            fill="url(#muscleLight)"
-            stroke="#e8ffd0"
-            strokeWidth="2"
-          />
-
-          <path
-            d="M80 37 L91 48 M94 35 L102 45 M105 42 L112 49"
-            fill="none"
-            stroke="#388861"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-
-          <path
-            d="M80 95 C84 86 94 82 103 86 M108 78 C124 84 138 91 146 103"
-            fill="none"
-            stroke="#efffd4"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </g>
-
-        <g transform="translate(420 0) scale(-1 1)">
-          <path
-            d="M151 108 C133 90 117 78 97 74 C81 71 68 82 69 99 C69 116 82 127 100 127 C118 126 137 116 155 117 Z"
-            fill="url(#bodySkin)"
-            stroke="#dfffba"
-            strokeWidth="2"
-          />
-
-          <path
-            d="M96 89 C84 84 74 91 74 101 C74 113 85 121 98 119 C109 117 120 111 128 105 C117 100 106 92 96 89 Z"
-            fill="url(#muscleLight)"
-          />
-
-          <path
-            d="M100 78 C94 67 87 57 84 46 C82 38 88 31 96 34 C103 37 109 48 115 52 L130 63 C142 70 152 83 158 99 L148 113 C135 103 124 96 112 92 Z"
-            fill="url(#bodySkin)"
-            stroke="#dfffba"
-            strokeWidth="2"
-          />
-
-          <path
-            d="M81 50 C73 45 71 35 78 29 C83 25 89 29 93 35 L99 43 C103 35 111 36 115 42 C119 47 115 54 110 59 L103 68 L91 64 Z"
-            fill="url(#muscleLight)"
-            stroke="#e8ffd0"
-            strokeWidth="2"
-          />
-
-          <path
-            d="M80 37 L91 48 M94 35 L102 45 M105 42 L112 49"
-            fill="none"
-            stroke="#388861"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
-
-          <path
-            d="M80 95 C84 86 94 82 103 86 M108 78 C124 84 138 91 146 103"
-            fill="none"
-            stroke="#efffd4"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
-        </g>
-      </g>
-
-      <g className="physique-torso" filter="url(#physiqueGlow)">
-        <path
-          d="M178 65 L178 83 C161 82 143 89 129 101 C118 111 121 126 132 139 C142 151 146 162 142 178 L131 221 C126 242 137 261 153 272 L164 333 L256 333 L267 272 C283 261 294 242 289 221 L278 178 C274 162 278 151 288 139 C299 126 302 111 291 101 C277 89 259 82 242 83 L242 65 L222 65 C219 79 214 87 210 89 C206 87 201 79 198 65 Z"
-          fill="url(#bodySkin)"
-          stroke="#dfffbb"
-          strokeWidth="2.2"
-          strokeLinejoin="round"
-        />
-
-        <path
-          d="M177 67 C180 83 191 92 210 96 C229 92 240 83 243 67"
-          fill="none"
-          stroke="#3b986b"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M145 108 C158 96 180 98 205 109 L205 145 C189 155 168 151 155 139 C147 132 143 120 145 108 Z"
-          fill="url(#muscleLight)"
-          stroke="#e8ffd0"
-          strokeWidth="1.5"
-        />
-
-        <path
-          d="M275 108 C262 96 240 98 215 109 L215 145 C231 155 252 151 265 139 C273 132 277 120 275 108 Z"
-          fill="url(#muscleLight)"
-          stroke="#e8ffd0"
-          strokeWidth="1.5"
-        />
-
-        <path
-          d="M151 112 C165 106 184 111 198 121 M269 112 C255 106 236 111 222 121 M210 111 L210 147"
-          fill="none"
-          stroke="#397f5e"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M171 157 C182 152 198 154 204 159 L203 181 C193 187 180 186 171 181 Z"
-          fill="url(#muscleLight)"
-          stroke="#e6ffd0"
-          strokeWidth="1.2"
-        />
-
-        <path
-          d="M249 157 C238 152 222 154 216 159 L217 181 C227 187 240 186 249 181 Z"
-          fill="url(#muscleLight)"
-          stroke="#e6ffd0"
-          strokeWidth="1.2"
-        />
-
-        <path
-          d="M169 190 C180 186 195 188 202 192 L201 214 C191 220 177 219 168 213 Z"
-          fill="url(#muscleLight)"
-          stroke="#e6ffd0"
-          strokeWidth="1.2"
-        />
-
-        <path
-          d="M251 190 C240 186 225 188 218 192 L219 214 C229 220 243 219 252 213 Z"
-          fill="url(#muscleLight)"
-          stroke="#e6ffd0"
-          strokeWidth="1.2"
-        />
-
-        <path
-          d="M167 223 C178 219 193 222 200 226 L199 247 C190 253 176 252 165 246 Z"
-          fill="url(#muscleLight)"
-          stroke="#e6ffd0"
-          strokeWidth="1.2"
-        />
-
-        <path
-          d="M253 223 C242 219 227 222 220 226 L221 247 C230 253 244 252 255 246 Z"
-          fill="url(#muscleLight)"
-          stroke="#e6ffd0"
-          strokeWidth="1.2"
-        />
-
-        <path
-          d="M148 164 C157 180 158 203 149 225 M272 164 C263 180 262 203 271 225 M210 153 L210 267"
-          fill="none"
-          stroke="#267e5a"
-          strokeWidth="3"
-          strokeLinecap="round"
-        />
-
-        <path
-          d="M164 268 C182 277 198 278 210 278 C222 278 238 277 256 268"
-          fill="none"
-          stroke="#dcffb9"
-          strokeWidth="2.5"
-          strokeLinecap="round"
-        />
-      </g>
-
-      <path
-        className="physique-energy"
-        d="M53 113 C34 71 58 35 94 19 M327 113 C346 71 322 35 286 19"
-        fill="none"
-        stroke="#c8ff65"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeDasharray="5 9"
-      />
-
-      <circle cx="52" cy="127" r="4" fill="#c8ff65" />
-      <circle cx="368" cy="127" r="4" fill="#c8ff65" />
-    </svg>
+      {/* Small decorative sparks */}
+      <span className="aura-spark aura-spark-one">✦</span>
+      <span className="aura-spark aura-spark-two">✧</span>
+    </div>
   );
 }
 
+ 
 /* ==========================================
    MAIN APP
 ========================================== */
@@ -1414,15 +1203,11 @@ function App() {
               </span>
             </div>
 
-            <div className="intro-emblem" aria-hidden="true">
-              <div className="intro-burst-ring" />
-              <div className="intro-orbit intro-orbit-one" />
-              <div className="intro-orbit intro-orbit-two" />
+            <div className="intro-emblem">
+             <div className="intro-burst-ring" aria-hidden="true" />
 
-              <div className="intro-arm">
-                <ArmIllustration />
-              </div>
-            </div>
+             <AuraOrb />
+          </div>
 
             <p className="intro-kicker">YOUR DAILY PROTEIN TRACKER</p>
 
